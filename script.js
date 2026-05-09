@@ -18,14 +18,18 @@ async function pucharAPI1() {
 async function pucharAPI2() {
     try {
 
-        const response = await fetch(`https://ipwho.is/`)
+        const response = await fetch(`https://restcountries.com/v3.1/name/brazil`)
         const dados = await response.json()
 
          if (!response.ok) {
             alert(`Erro HTTP: ${response.status} - ${response.statusText}`)
             return
         }
-        const inputpais = document.querySelector(`#inputpais`).value = dados.ip
+
+        const inputpais = document.querySelector(`#inputpais`).value = dados[0].name.common
+        const inputcapital = document.querySelector(`#inputcapital`).value = dados[0].capital
+        const inputpopulacao = document.querySelector(`#inputpopulacao`).value = dados[0].population
+        // dados[0] para entrar no arrey 
     } catch (error) {
         console.error(error)
     }
