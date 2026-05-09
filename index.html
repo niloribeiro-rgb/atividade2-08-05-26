@@ -18,12 +18,11 @@
                 <button onclick="apagarImg()">tirar imagem</button>
             </div>
             <div class="conteudoContainer">
-                <img src="" alt="" id="imgDog">
+                <img src="" alt="imagem aleatoria" id="imgDog">
                 <div class="inputContainer">
                     <label for="inputDolar">valor do dolar</label>
                     <input type="text" id="inputDolar" readonly>
                 </div>
-                <br>
                 <div class="inputContainer">
                     <label for="inputpais">pais</label>
                     <input type="text" id="inputpais" readonly>
@@ -31,6 +30,17 @@
                     <input type="text" id="inputcapital" readonly>
                     <label for="inputpopulacao">populacao</label>
                     <input type="text" id="inputpopulacao" readonly>
+                </div>
+                <div class="inputContainer">
+                    <label for="inputKey">OpenWeader key</label>
+                    <input type="text" id="inputKey" placeholder="Escreva sua key OpenWeader">
+                    <label for="inputCidade">Cidade</label>
+                    <input type="text" id="inputCidade" placeholder="Escreva a cidade">
+                </div>
+                <button onclick="pucharAPI4()">Confirmar key</button>
+                <div class="inputContainer">
+                    <label for="inputClima">Clima</label>
+                    <input type="text" id="inputClima" readonly>
                 </div>
             </div>
         </div>
