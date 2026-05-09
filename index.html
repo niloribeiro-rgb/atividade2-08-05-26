@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <label for="inputDolar">valor do dolar</label>
-    <input type="text" id="inputDolar" readonly>
 
-     <label for="inputpais">pais</label>
-    <input type="text" id="inputpais" readonly>
+<body>
+    <main>
+        <div class="inputContainer">
+            <label for="inputDolar">valor do dolar</label>
+            <input type="text" id="inputDolar" readonly>
+        </div>
+<br>
+        <div class="inputContainer">
+        <label for="inputpais">pais</label>
+        <input type="text" id="inputpais" readonly>
+        <label for="inputcapital">Capital</label>
+        <input type="text" id="inputcapital" readonly>
+        <label for="inputpopulacao">populacao</label>
+        <input type="text" id="inputpopulacao" readonly>
+        </div>
+    </main>
+
     <button onclick="pucharAPI1()">ver</button>
 </body>
+
 </html>
