@@ -30,7 +30,31 @@ async function pucharAPI2() {
         const inputcapital = document.querySelector(`#inputcapital`).value = dados[0].capital
         const inputpopulacao = document.querySelector(`#inputpopulacao`).value = dados[0].population
         // dados[0] para entrar no arrey 
+        
     } catch (error) {
         console.error(error)
     }
+    
 }
+const imgDog = document.querySelector(`#imgDog`)
+async function pucharAPI3(){
+    
+    try{
+        const response = await fetch(`https://dog.ceo/api/breeds/image/random`)
+        const dados = await response.json()
+
+        if(!response.ok){
+            alert(`erro http: ${response.status} - ${response.statusText}`)
+        }
+        
+        imgDog.src = dados.message
+        // alert(dados.message)
+    }
+        catch (error){
+            console.error(error)
+        }
+}
+function apagarImg(){
+    imgDog.src = ""
+}
+pucharAPI3()
