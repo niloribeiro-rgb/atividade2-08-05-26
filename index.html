@@ -11,22 +11,30 @@
 
 <body>
     <main>
-        <div class="inputContainer">
-            <label for="inputDolar">valor do dolar</label>
-            <input type="text" id="inputDolar" readonly>
-        </div>
-<br>
-        <div class="inputContainer">
-        <label for="inputpais">pais</label>
-        <input type="text" id="inputpais" readonly>
-        <label for="inputcapital">Capital</label>
-        <input type="text" id="inputcapital" readonly>
-        <label for="inputpopulacao">populacao</label>
-        <input type="text" id="inputpopulacao" readonly>
+        <div class="container">
+            <div class="buttonContainer">
+                <button onclick="pucharAPI1()">ver valores</button>
+                <button onclick="pucharAPI3()">Atualizar imagem</button>
+                <button onclick="apagarImg()">tirar imagem</button>
+            </div>
+            <div class="conteudoContainer">
+                <img src="" alt="" id="imgDog">
+                <div class="inputContainer">
+                    <label for="inputDolar">valor do dolar</label>
+                    <input type="text" id="inputDolar" readonly>
+                </div>
+                <br>
+                <div class="inputContainer">
+                    <label for="inputpais">pais</label>
+                    <input type="text" id="inputpais" readonly>
+                    <label for="inputcapital">Capital</label>
+                    <input type="text" id="inputcapital" readonly>
+                    <label for="inputpopulacao">populacao</label>
+                    <input type="text" id="inputpopulacao" readonly>
+                </div>
+            </div>
         </div>
     </main>
-
-    <button onclick="pucharAPI1()">ver</button>
 </body>
 
 </html>
