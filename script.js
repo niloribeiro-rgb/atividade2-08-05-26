@@ -7,7 +7,7 @@ async function pucharAPI1() {
             alert("um erro no json")
             return
         }
-        const inputDolar = document.querySelector(`#inputDolar`).value = dados.USDBRL.high
+        const inputDolar = document.querySelector(`#inputDolar`).value = dados.USDBRL.low
 
     }
     catch (error) {
@@ -61,6 +61,8 @@ async function pucharAPI4() {
     const inputKey = document.querySelector('#inputKey').value
     const inputCidade = document.querySelector('#inputCidade').value
 
+     const imgClima = document.querySelector('#imgClima')
+
     try {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputCidade}&appid=${inputKey}&units=metric&lang=pt_br`)
         const dados = await response.json()
@@ -69,7 +71,13 @@ async function pucharAPI4() {
             return
         }
         const inputClima = document.querySelector('#inputClima').value = dados.weather[0].description
-        // weather[0] acessar o arrey 
+        // weather[0] acessar o arrey
+        imgClima.src = `https://openweathermap.org/payload/api/media/file/${dados.weather[0].icon}.png`
+        // erro no link que estava no site
+        // no site:  https://openweathermap.org/payload/api/media/file/10d%402x.png
+        // cocertado: https://openweathermap.org/payload/api/media/file/10d.png
+
+        
     }
     catch (error) {
         console.error(error)

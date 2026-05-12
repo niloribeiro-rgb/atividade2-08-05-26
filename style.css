@@ -45,9 +45,13 @@ button {
 }
 
 
-img {
+.imgDog {
     width: 400px;
     height: auto;
     border: 1px solid;
     border-radius: 5px;
+}
+#imgClima{
+    width: 50px;
+    height: auto;
 }
